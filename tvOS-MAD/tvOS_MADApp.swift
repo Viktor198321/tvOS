@@ -11,7 +11,7 @@ import SwiftUI
 struct tvOS_MADApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SignInView()
         }
     }
 }

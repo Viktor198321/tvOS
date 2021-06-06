@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,10 @@
 		CE3724B0266CD53D005492EC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3724AF266CD53D005492EC /* ContentView.swift */; };
 		CE3724B2266CD53F005492EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3724B1266CD53F005492EC /* Assets.xcassets */; };
 		CE3724B5266CD53F005492EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3724B4266CD53F005492EC /* Preview Assets.xcassets */; };
+		CE3724BF266CD5E3005492EC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CE3724BE266CD5E3005492EC /* Alamofire */; };
+		CE3724C3266CD626005492EC /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CE3724C2266CD626005492EC /* SwiftyJSON */; };
+		CE3724C7266CD6F6005492EC /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3724C6266CD6F6005492EC /* SignInView.swift */; };
+		CE3724CC266CD7E0005492EC /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3724CB266CD7E0005492EC /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,8 @@
 		CE3724B1266CD53F005492EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE3724B4266CD53F005492EC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CE3724B6266CD53F005492EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3724C6266CD6F6005492EC /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		CE3724CB266CD7E0005492EC /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3724C3266CD626005492EC /* SwiftyJSON in Frameworks */,
+				CE3724BF266CD5E3005492EC /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				CE3724AD266CD53D005492EC /* tvOS_MADApp.swift */,
+				CE3724CA266CD7AA005492EC /* ViewModel */,
+				CE3724C5266CD6AD005492EC /* View */,
 				CE3724AF266CD53D005492EC /* ContentView.swift */,
 				CE3724B1266CD53F005492EC /* Assets.xcassets */,
 				CE3724B6266CD53F005492EC /* Info.plist */,
@@ -67,6 +77,22 @@
 				CE3724B4266CD53F005492EC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CE3724C5266CD6AD005492EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE3724C6266CD6F6005492EC /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE3724CA266CD7AA005492EC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CE3724CB266CD7E0005492EC /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +111,10 @@
 			dependencies = (
 			);
 			name = "tvOS-MAD";
+			packageProductDependencies = (
+				CE3724BE266CD5E3005492EC /* Alamofire */,
+				CE3724C2266CD626005492EC /* SwiftyJSON */,
+			);
 			productName = "tvOS-MAD";
 			productReference = CE3724AA266CD53D005492EC /* tvOS-MAD.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +142,10 @@
 				Base,
 			);
 			mainGroup = CE3724A1266CD53D005492EC;
+			packageReferences = (
+				CE3724BD266CD5E3005492EC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CE3724C1266CD626005492EC /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = CE3724AB266CD53D005492EC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +173,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE3724B0266CD53D005492EC /* ContentView.swift in Sources */,
+				CE3724C7266CD6F6005492EC /* SignInView.swift in Sources */,
+				CE3724CC266CD7E0005492EC /* ViewModel.swift in Sources */,
 				CE3724AE266CD53D005492EC /* tvOS_MADApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +362,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE3724BD266CD5E3005492EC /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.3;
+			};
+		};
+		CE3724C1266CD626005492EC /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE3724BE266CD5E3005492EC /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE3724BD266CD5E3005492EC /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CE3724C2266CD626005492EC /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE3724C1266CD626005492EC /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE3724A2266CD53D005492EC /* Project object */;
 }
